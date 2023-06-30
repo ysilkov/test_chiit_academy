@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/test_chiit_academy/static/css/main.08f5e60f.css",
+    "main.js": "/test_chiit_academy/static/js/main.0697d687.js",
+    "static/js/787.740f23fe.chunk.js": "/test_chiit_academy/static/js/787.740f23fe.chunk.js",
+    "index.html": "/test_chiit_academy/index.html",
+    "main.08f5e60f.css.map": "/test_chiit_academy/static/css/main.08f5e60f.css.map",
+    "main.0697d687.js.map": "/test_chiit_academy/static/js/main.0697d687.js.map",
+    "787.740f23fe.chunk.js.map": "/test_chiit_academy/static/js/787.740f23fe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.08f5e60f.css",
+    "static/js/main.0697d687.js"
+  ]
+}
