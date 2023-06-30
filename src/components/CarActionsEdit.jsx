@@ -8,7 +8,7 @@ const CarActionsEdit = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const storedCars = JSON.parse(localStorage.getItem("cars"));
-    const car = storedCars.find((car) => car.id == id);
+    const car = storedCars.find((car) => car.id === id);
     setCar(car);
   }, [id]);
 
@@ -27,7 +27,7 @@ const CarActionsEdit = () => {
     e.preventDefault();
     const storedCars = JSON.parse(localStorage.getItem("cars"));
     const updatedCars = storedCars.map((carItem) => {
-      if (carItem.id == id) {
+      if (carItem.id === id) {
         return {
           ...carItem,
           ...car,

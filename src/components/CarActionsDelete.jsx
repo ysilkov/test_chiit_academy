@@ -7,7 +7,7 @@ const CarActionsDelete = () => {
   const { id } = useParams();
   const handleDelete = () => {
    const storedCars = JSON.parse(localStorage.getItem("cars"));
-   const updatedCars = storedCars.filter((carItem) => carItem.id != id);
+   const updatedCars = storedCars.filter((carItem) => carItem.id !== id);
    localStorage.setItem("cars", JSON.stringify(updatedCars));
    setIsModalOpen(false);
    navigate("/");
