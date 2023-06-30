@@ -10,14 +10,18 @@ export const usePagination = (itemsPerPage, initialPage = 1) => {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-  const filteredCars = cars.filter((car) =>
-    Object.entries(car).some(([key, value]) => {
-      if (typeof value === "string") {
-        return value.toLowerCase().includes(search.toLowerCase());
-      }
-      return false;
-    })
-  );
+  const filteredCars = cars
+    ? cars.filter(
+        (car) =>
+          car.car?.toLowerCase().includes(search.toLowerCase()) ||
+          car.car_model?.toLowerCase().includes(search.toLowerCase()) ||
+          car.car_vin?.toLowerCase().includes(search.toLowerCase()) ||
+          car.car_color?.toLowerCase().includes(search.toLowerCase()) ||
+          car.car_model_year?.toString().includes(search.toLowerCase()) ||
+          car.price?.toString().includes(search.toLowerCase()) ||
+          car.availability?.toString().includes(search.toLowerCase())
+      )
+    : [];
   const goToPreviousPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
