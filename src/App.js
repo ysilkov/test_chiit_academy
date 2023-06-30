@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CarActionsDelete from "./components/CarActionsDelete";
+import CarActionsEdit from "./components/CarActionsEdit";
+import { BrowserRouter } from "react-router-dom";
+import CarTable from "./components/CarTable";
+import { Routes, Route } from "react-router-dom";
+import AddCarModal from "./components/AddCarModal";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<CarTable />} />
+          <Route path="/delete/:id" element={<CarActionsDelete />} />
+          <Route path="/edit/:id" element={<CarActionsEdit />} />
+          <Route path="/add" element={<AddCarModal />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
